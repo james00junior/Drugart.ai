@@ -1,0 +1,130 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Bio Analytics {% endblock %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <!-- [ breadcrumb ] start -->
+                    <div class="page-header">
+                        <div class="page-block">
+                            <div class="row align-items-center">
+                                <div class="col-md-12">
+                                    <div class="page-header-title">
+                                        <h5 class="m-b-10">Bio Analytics</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [ breadcrumb ] end -->
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                            <!-- [ Main Content ] start -->
+                            <div class="row">
+                                <!-- [ Breadcrumbs & Pagination ] start -->
+                                <div class="col-sm-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>Upload file below:</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <form action="/chart-morris-analytics-processing.html">
+                                                <input type="file"  id="myFile" onkeyup="manage(this)" name="filename" class="btn btn-outline-secondary" title="" data-toggle="tooltip" data-original-title="fasta, fastq, .zip">
+                                                <br><input type="submit" id="sb-progress" class="btn btn-square btn-primary" >
+                                              </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            <!-- [ Breadcrumbs & Pagination ] start -->
+                            <div class="col-sm-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Open Terminal:</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <form action="/chart-morris-analytics-processing.html">
+                                            <!-- <input type="submit" id="sb-progress" class="btn btn-square btn-primary" > -->
+                                            <button id="sb-progress" class="btn btn-square btn-primary" disabled>Open Terminal</button>
+
+                                          </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                                <!-- [ Breadcrumbs & Pagination ] end -->
+                            </div>
+                            <!-- [ Main Content ] end -->
+                        </div>
+                        <div class="row">
+
+                            <div class="col-sm-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Paste a sequence below:</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <form action="/page-bio-analytics.html">
+                                            <textarea type="email" class="form-control"  id="txt" onkeyup="manage(this)" aria-describedby="emailHelp" placeholder="Paste your sequence here"></textarea>
+                                            <br><input type="submit" id="sb1-progress" class="btn btn-square btn-primary" disabled>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Paste Dataset Link:</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <form action="/page-bio-analytics.html">
+                                            <textarea type="email" class="form-control"  id="txt" onkeyup="manage(this)" aria-describedby="emailHelp" placeholder="Paste your link here"></textarea>
+                                            <br><input type="submit" id="sb1-progress" class="btn btn-square btn-primary" disabled>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- [ Breadcrumbs & Pagination ] end -->
+                        </div>
+                        <!-- [ Main Content ] end -->
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->
+
+    <script>
+        function manage(txt) {
+            var bt = document.getElementById('sb1-progress');
+            if (txt.value != '') {
+                bt.disabled = false;
+            }
+            else {
+                bt.disabled = true;
+            }
+        }
+
+    </script>
+
+
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

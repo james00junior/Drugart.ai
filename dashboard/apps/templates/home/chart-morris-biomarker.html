@@ -1,0 +1,155 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Charts {% endblock %} 
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <!-- [ breadcrumb ] start -->
+                    <div class="page-header">
+                        <div class="page-block">
+                            <div class="row align-items-center">
+                                <div class="col-md-12">
+                                    <div class="page-header-title">
+                                        <h5 class="m-b-10">BiMarkerDiscovery</h5>
+                                    </div>
+                                    <ul class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
+                                        <li class="breadcrumb-item"><a href="javascript:">BiMarkerDiscovery</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="print-button-item" ><button type="button" class="btn btn-primary" title="Print Or Save as PDF" data-toggle="Print Or Save as PDF" onclick="print()">Print</button></span>
+
+                    <!-- [ breadcrumb ] end -->
+                    <div class="main-body">
+                        <div class="page-wrapper">
+
+                            <!-- [ Main Content ] start -->
+                            <div class="row">
+
+  
+                                <!-- [ Morris Chart ] start -->
+                                <div class="col-xl-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>Per base sequence quality</h5>
+                                        </div>
+                                        <div class="card-block">
+                                            <img src="{{ ASSETS_ROOT }}/images/bio/bio1.png" width="500" height="350" alt="capebiosa gif">  
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>Per sequence quality scores</h5>
+                                        </div>
+                                        <div class="card-block">
+                                            <img src="{{ ASSETS_ROOT }}/images/bio/bio2.png" width="500" height="350" alt="capebiosa gif">  
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>Per base sequence</h5>
+                                        </div>
+                                        <div class="card-block">
+                                            <img src="{{ ASSETS_ROOT }}/images/bio/bio3.png" width="500" height="350" alt="capebiosa gif">  
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>Per sequence GC content</h5>
+                                        </div>
+                                        <div class="card-block">
+                                            <img src="{{ ASSETS_ROOT }}/images/bio/bio4.png" width="500" height="350" alt="capebiosa gif">  
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>Per sequence GC content</h5>
+                                        </div>
+                                        <div class="card-block">
+                                            <img src="{{ ASSETS_ROOT }}/images/bio/bio5.png" width="500" height="350" alt="capebiosa gif">  
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-xl-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>Line [ Angle ] Chart</h5>
+                                        </div>
+                                        <div class="card-block">
+                                            <div id="morris-line-chart" class="ChartShadow" style="height:300px"></div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <!-- <div class="col-xl-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>Line [ Smooth ] Chart</h5>
+                                        </div>
+                                        <div class="card-block">
+                                            <div id="morris-line-smooth-chart" class="ChartShadow" style="height:300px"></div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <!-- <div class="col-xl-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>Donut Chart</h5>
+                                        </div>
+                                        <div class="card-block">
+                                            <div id="morris-donut-chart" style="height:300px"></div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <!-- [ Morris Chart ] end -->
+                            </div>
+
+                            <!-- [ Main Content ] end -->
+                        </div>
+                    </div>
+                    <span class="print-button-item" ><button type="button" class="btn btn-primary" title="Print Or Save as PDF" data-toggle="Print Or Save as PDF" onclick="print()">Print</button></span>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->
+    
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+    <!-- chart-morris Js -->
+    <script src="{{ ASSETS_ROOT }}/plugins/chart-morris/js/raphael.min.js"></script>
+    <script src="{{ ASSETS_ROOT }}/plugins/chart-morris/js/morris.min.js"></script>
+    <script src="{{ ASSETS_ROOT }}/js/pages/chart-morris-custom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+
+{% endblock javascripts %}
